@@ -101,45 +101,29 @@ iterate()
 
 
 
-
-
-
-
-
-
-
-
-
-
 ### Output:
 
 ### i.)do…while: 
-```
-Positive numbers
-Enter a positive value for START: 1
-Enter a positive value for END: 4
-1 2 3 4 
-```
+![Screenshot (78)](https://github.com/user-attachments/assets/8d26d7c2-b12c-44b7-9a71-8b8a474ff3a7)
+
 
 
 ### ii.) while…do 
 
+![Screenshot (79)](https://github.com/user-attachments/assets/545571e8-b702-4f12-9540-5ca9151f07ab)
 
 
 ### iii.) switch 
+![Screenshot (80)](https://github.com/user-attachments/assets/dd6fa195-9bdc-4fd5-9e5a-aa8250b9118f)
 
 
 ### iv.) if else
+![Screenshot (81)](https://github.com/user-attachments/assets/c4899491-1d68-4a5e-864d-0214e10012cb)
 
 
 ### v.) for 
 
-
-
-
-
-
-
+![Screenshot (82)](https://github.com/user-attachments/assets/eb2c99ca-1fb6-4ec7-9086-1a0d9e1bdde3)
 
 
 ### Result:
