@@ -1,5 +1,4 @@
 # Ex.No: 6 To check whether the string is Palindrome and generate test cases.
-
 ### DATE:                                                                            
 ### REGISTER NUMBER : 212222040020
 ### AIM: 
@@ -37,7 +36,6 @@ else:
     else:
         print("The given string is not a palindrome")
 ```
-
 ### Output:
 
 ![Screenshot (87)](https://github.com/user-attachments/assets/4d40e2fd-9d07-4020-a52a-2bdafc502ee5)
