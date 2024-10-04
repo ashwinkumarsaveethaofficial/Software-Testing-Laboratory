@@ -40,11 +40,7 @@ else:
 
 ### Output:
 
-
 ![Screenshot (87)](https://github.com/user-attachments/assets/4d40e2fd-9d07-4020-a52a-2bdafc502ee5)
-
-
-
 
 ### Result:
 Thus, a program to check palindrome has been written and test cases have been written and verified successfully.
