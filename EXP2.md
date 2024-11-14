@@ -1,87 +1,48 @@
-# Ex.No: 2   Matrix Multiplication 
+# Ex.No: 11  Pytest Installation 
 
-### DATE:                                                                     
+### DATE: 22-10-2024                                                                         
 ### REGISTER NUMBER : 212222040020
 
-
 ### AIM: 
-Write a python program for matrix multiplication and inspect for failures.
+To install Pytest and to write test cases for a program and to test using Pytest.
+
+#### Pytest:
+It is a testing framework that allows users to write test codes using python programming
+language. It helps you to write simple and scalable test case for databases, API’s or UI. Pytest
+is mainly used for writing tests from simple unit tests to complex functional tests. 
  
-### Algorithm:
+### Procedure:
+#### Installation on Windows:
+1) Navigate to folder where the python is installed.
+2) Open scripts folder and copy the address location.
+3) Open command prompt and execute “cd copied_address_Location”.
+4) Execute “pip install pytest”.
+#### Creating File:
+1) The file to be tested should have name as test_*.py or *_test.py
+2) File should be located in the same folder where pytest module is installed
+#### Creating a sample program:
+1) Function to be tested should has name def test_*();
+2) Inside the function the line to be tested should has assert keyword at the beginning.
 
-Algorithm:
-1. Start the program.
-2. Create empty list formatrix1, matrix2 and result.
-3. Get the rows and columns count from the user.
-4. Get the values of two matrix.
-5. Perform matrix multiplication and store the answer in result.
-6. Stop the program.
-### Program:
+#### Terminologies in Pytest:
+     F – Failed
+     . – Passed S
+       – Skipped X
+       – xpassed x
+       – xfailed
+#### Eg:
+#### Parameterized Addition Program:
 ```
-
-r1, c1 = input("Enter row and column count in matrix 1: ").split() 
-r2, c2 = input("Enter row and column count in matrix 2: ").split() 
-
-matrix1 = [] 
-matrix2 = [] 
-result = []
-
-# Check if input values are numeric
-if r1.isnumeric() and c1.isnumeric() and r2.isnumeric() and c2.isnumeric(): 
-    r1 = int(r1) 
-    r2 = int(r2) 
-    c1 = int(c1) 
-    c2 = int(c2)
-
-    # Check if matrix multiplication is possible
-    if c1 != r2: 
-        print("Matrix multiplication not possible") 
-    elif max(r1, c1, r2, c2) > 20 or min(r1, c1, r2, c2) == 0: 
-        print("Matrix multiplication not possible") 
-    else: 
-        # Input matrix 1
-        
-        print("Enter matrix 1:")
-        for i in range(r1): 
-            a = [] 
-            for j in range(c1): 
-                a.append(int(input(f"Element [{i+1}][{j+1}] for matrix 1: "))) 
-            matrix1.append(a) 
-        
-        # Input matrix 2
-        print("Enter matrix 2:")
-        for i in range(r2): 
-            a = [] 
-            for j in range(c2): 
-                a.append(int(input(f"Element [{i+1}][{j+1}] for matrix 2: "))) 
-            matrix2.append(a) 
-        
-        # Matrix multiplication logic
-        for i in range(r1): 
-            inter = [] 
-            for j in range(c2): 
-                sum = 0 
-                for k in range(c1):  # Should be c1 because it matches r2
-                    sum += matrix1[i][k] * matrix2[k][j] 
-                inter.append(sum) 
-            result.append(inter) 
-        
-        # Output the result
-        print("Resultant matrix after multiplication:")
-        for i in range(r1): 
-            for j in range(c2): 
-                print(result[i][j], end=" ") 
-            print() 
-
-else: 
-    print("Enter valid numeric values for matrix dimensions.")
-
+File name: test_parameter.py
+import pytest
+@pytest.mark.parameterize(“input1, input2, output”,[(5,5,10),(3,5,12)])
+def test_add(input1, input2, output):
+assert input1 + input2 == output
+for execution : execute “pytest test_parameter.py”.
 ```
-
 
 ### Output:
-
-![Screenshot (83)](https://github.com/user-attachments/assets/07cd27e1-875e-4aac-b937-7a0493a4a665)
+![image](https://github.com/user-attachments/assets/e3326fd4-e7fe-4e64-977d-7248146f2ff3)
 
 
 
@@ -89,4 +50,6 @@ else:
 
 
 ### Result:
-Thus, the python program for matrix multiplication is implemented and the causes for its failure is introspected successfully.
+Thus, we have installed pytest, implemented and executed a parameterized addition
+program and the output is verified successfully. 
+
