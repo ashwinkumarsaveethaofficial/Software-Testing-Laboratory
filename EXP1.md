@@ -1,162 +1,243 @@
-# Ex.No: 10  Test plan document for library application
+# Ex.No: 1 Write programs in Python Language to demonstrate the working of followingconstructs with possible test cases: a) do…while b) while…do c) if …else d) switch e) for 
 
-### DATE: 16-10-2024                                                                         
+### DATE: 13-08-2024                                                                         
 ### REGISTER NUMBER : 212222040020
+
+### AIM:  
+To write python programs for do…while, while, for, switch and if…else and test with possible test 
+Cases 
+
+### Algorithm:
+1. Start the program.
+2. Create separate files for each given program.
+3. Write simple program for each construct.
+4.  the program with possible test cases.
+5. Stop the program.
+### Program:
+
+### i.)do…while: 
+
 ```
-The Library Management System is an online application for assisting a librarian in managing a
-book library in a university. The system would provide basic set of features to add/update clients,
-add/update books, search for books, and manage check-in / checkout processes. Our test group
-tested the system based on the requirement specification.
+def display():
+     start=input("Enter a positive value for START: ")
+      end=input("Enter a positive value for END: ")
+      if start.isnumeric() and end.isnumeric():
+        while True:
+            start=int(start)
+            end=int(end)
+            print(start,end=‘ ‘)
+            if start<end:
+                start+=1
+            else:
+                break
+      else:
+        print("Enter a valid positive number.") 
+  display() 
 ```
-### Introduction
-This test report is the result for testing in the LMS. It mainly focuses on two problems: what
-we will test and how we will test.
-### Result
-### GUI test
-Pass criteria: librarians could use this GUI to interface with the backend library database
-without any difficulties
-Result: pass
-### Database test
-Pass criteria: Results of all basic and advanced operations are normal (refer to section 4)
-Result: pass
-### Basic function test Add a student Pass criteria:
+
+### ii.) while…do 
+
 ```
-□ Each customer/student should have following attributes: Student ID/SSN
-(unique), Name, Address and Phone number.
-Result: pass
-□ The retrieved customer information by viewing customer detail should contain
-the four attributes.
-Result: pass
+start=input("Enter a positive value for START: ") 
+end=input("Enter a positive value for END: ")
+if start.isnumeric() and end.isnumeric():
+     start=int(start)
+     end=int(end)
+     while start<end:
+          print(start)
+          start+=1
+else:
+   print("Enter a valid positive number.")
+
 ```
-### Update/delete student Pass criteria:
+
+### iii.) switch 
+
 ```
-□ The record would be selected using the student ID
-Result: pass
-□ Updates can be made on full. Items only: Name, Address, Phone number
-Result: pass
-□ The record can be deleted if there are no books issued by user.
-Result: Partially pass. When no books issued by user, he can be deleted. But
-when there are books Issued by this user, he was also deleted. It is wrong.
-□ The updated values would be reflected if the same customer's ID/SSN is called
-for.
-Result: pass
-□ If customer were deleted, it would not appear in further search queries.
-Result: pass
+def switch():
+    switcher={
+ 0:"even",
+  1:"odd"
+}
+n=input('Enter a value for N: ') try:
+  n=int(n)
+  print(switcher[n%2])
+except ValueError:
+   print("Enter a valid number.")
+switch() 
+
 ```
-### Add a book
+
+### iv.) if else
+
 ```
-Pass criteria:
-□ Each book shall have following attributes: Call Number, ISBN, Title, Author
-name.
-Result: pass
-□ The retrieved book information should contain the four attributes.
-Result: pass
+def compare():
+  a=input("Enter a value for A: ")
+  b=input("Enter a value for B: ")
+  try:
+     a=int(a)
+     b=int(b)
+     if a>b:
+        print("A is greater than")
+     elif a<b:
+        print("B is greater than")
+     else:
+        print("A is equal to B")
+  except ValueError:
+        print(“Enter a valid number.”) 
+
 ```
-### Update/delete book
+
+### v.) for
+
 ```
-Pass criteria:
-□ The book item can be retrieved using the call number
-Result: did not pass. Cannot redrive using the call number
-□ The data items which can be updated are: ISBN, Title, Author name Result: pass
-□ The book can be deleted only if no user has issued it.
-Result: partially pass. When no user has issued it, pass. When there are
-user having issued it, did not pass
-□ The updated values would be reflected if the same call number is called for Result:
-pass
-□ If book were deleted, it would not appear in further search queries. Result: pass
+def iterate():
+    string=input("Enter a string: ") for
+    i in string:
+       print(ord(i),end=" ")
+iterate() 
 ```
-### Search for Book
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Output:
+
+### i.)do…while: 
 ```
-Pass criteria:
-□ The product shall let Librarian query books„ detail information by their
-ISBN number or Author or Title.
-Result: pass
-□ The search results would produce a list of books, which match the
-search parameters with following Details: Call number, ISBN
-number, Title, Author
-Result: pass
-□ The display would also provide the number of copies which is available for issue
-Result: pass
-□ The display shall provide a means to select one or more rows to a user-list Result:
-pass
-□ A detailed view of each book should provide information about checkin/check out status, with the borrower’s information.
-Result: pass
-□ The search display will be restricted to 20 results per page and there
-would be means to navigate from sets of search results.
-Result: pass
-□ The user can perform multiple searches before finally selecting a set
-of books for check in or checkout. These should be stored across
-searches.
-Result: pass
-□ A book may have more than one copy. But every copy with the same
-ISBN number should have same detail information.
-Result: pass
-□ The borrower’s list should agree with the data in student’s account Result: pass
+Positive numbers
+Enter a positive value for START: 1
+Enter a positive value for END: 4
+1 2 3 4 
+
+Negative numbers
+Enter a positive value for START: -10
+Enter a positive value for END: 5 Enter
+a valid positive number. 
+
+Character and string input
+Enter a positive value for START: hello
+Enter a positive value for END: y
+Enter a valid positive number. 
+
+Null input
+Enter a positive value for START:
+Enter a positive value for END:
+Enter a valid positive number. 
 ```
-### Check-in book
+
+
+### ii.) while…do 
 ```
-Pass criteria:
-□ Librarians can check in a book using its call number
-Result: pass
-□ The check-in can be initiated from a previous search operation where
-user has selected a set of books.
-Result: pass
-□ The return date would automatically reflect the current
-system date. Result: did not pass.
-□ Any late fees would be computed as difference between due date and
-return date at rate of 10 cents a day.
-Result: did not pass
-□ A book, which has been checked in once, should not be checked in again Result:
-pass
+Positive numbers
+Enter a positive value for START: 1
+Enter a positive value for END: 4
+1 2 3 4 
+
+
+Negative numbers
+Enter a positive value for START: -10
+Enter a positive value for END: 5 Enter
+a valid positive number. 
+
+
+Character and string input
+Enter a positive value for START: abc
+Enter a positive value for END: 100
+Enter a valid positive number. 
+
+
+Null input
+Enter a positive value for START:
+Enter a positive value for END:
+Enter a valid positive number. 
+
+
 ```
-### Check-out book
+
+
+### iii.) switch 
 ```
-Pass criteria:
-□ Librarians can check out a book using its call number Result: pass
-□ The checkout can be initiated from a previous search operation where user has selected a set of
-books.
-Result: pass
-□ The student ID who is issuing the book would be entered Result: pass
-□ The issue date would automatically reflect the current system date. Result: did not pass
-□ The due date would automatically be stamped as 5 days from current date. Result: did not pass
-□ A book, which has been checked out once, should not be checked out again
-Result: pass
-□ A student who has books due should not be allowed to check out any books
-Result: did not pass
-□ The max. No of books that can be issued to a customer would be 10. The system should not
-allow checkout of books beyond this limit.
-Result: pass View book detail Pass criteria:
-□ This view would display details about a selected book from search operation
-Result: pass
-□ The details to be displayed are: Call number, IBN, Title, Author, Issue status (In library or
-checked out), If book is checked out it would display, User ID & Name, Checkout date, Due
-date
-Result: for checkout date and due date, did not pass
-□ Books checked in should not display user summary
-Result: pass
-□ Books checked out should display correct user details. Result: pass
+Positive numbers
+Enter a value for N: 1
+odd
+
+Negative numbers
+Enter a value for N: -10
+even
+
+
+Character and string input
+Enter a value for N: hello
+Enter a valid number.
+
+
+Null input
+Enter a value for N:
+Enter a valid number. 
+
 ```
-### View student detail Pass criteria:
+
+### iv.) if else
 ```
-□ Librarians can select a user record for detailed view Result: pass
-□ The detail view should show:
-a. User name, ID, Address & Phone number Result: pass
-b. The books issued by user with issue date, due date, call number, title Result: did not pass
-c. Late fees & Fines summary and total Result: did not pass
-□ The display should match existing user profile Result: pass
-□ The books checked out should have their statuses marked Result: pass
-□ The book search query should show the user id correctly. Result: pass
+
+Positive numbers
+Enter a value for A: 1
+Enter a value for B: 1
+A is equal to B.
+
+
+Negative numbers
+Enter a value for A: -10
+Enter a value for B: 5 B
+is greater than A.
+
+
+Character and string input
+Enter a value for A: hello
+Enter a value for B: y
+Enter a valid number.
+
+
+Null input
+Enter a value for A:
+Enter a value for B:
+Enter a valid number. 
 ```
-### Network test
+
+
+### v.) for 
 ```
-Pass criteria: Results of operations (ping, ftp and ODBC connectivity check) are normal
-Result: did not test this item, because no enough machines and no available environment.
+Characters
+Enter a string: say
+115 97 121
+
+Number
+Enter a string: 1543
+49 53 52 51
+
+Null input
+Enter a string: 
 ```
+
+
+
+
 
 
 
 
 ### Result:
-Thus, the Test cases for library application is implemented and output is verified successfully.
+Thus, the python program to demonstrate the working of given constructs is implemented and the output is verified successfully.
 
 
