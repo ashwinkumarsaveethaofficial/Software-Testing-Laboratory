@@ -1,48 +1,33 @@
-# Ex.No: 11  Pytest Installation 
-
-### DATE: 22-10-2024                                                                         
-### REGISTER NUMBER : 212222040020
-
-### AIM: 
-To install Pytest and to write test cases for a program and to test using Pytest.
-
-#### Pytest:
-It is a testing framework that allows users to write test codes using python programming
-language. It helps you to write simple and scalable test case for databases, API’s or UI. Pytest
-is mainly used for writing tests from simple unit tests to complex functional tests. 
+# Ex.No: 12 Pytest Python program for Addition
  
-### Procedure:
-#### Installation on Windows:
-1) Navigate to folder where the python is installed.
-2) Open scripts folder and copy the address location.
-3) Open command prompt and execute “cd copied_address_Location”.
-4) Execute “pip install pytest”.
-#### Creating File:
-1) The file to be tested should have name as test_*.py or *_test.py
-2) File should be located in the same folder where pytest module is installed
-#### Creating a sample program:
-1) Function to be tested should has name def test_*();
-2) Inside the function the line to be tested should has assert keyword at the beginning.
-
-#### Terminologies in Pytest:
-     F – Failed
-     . – Passed S
-       – Skipped X
-       – xpassed x
-       – xfailed
-#### Eg:
-#### Parameterized Addition Program:
+### DATE:22-10-2024                                                                         
+### REGISTER NUMBER :212222040020
+### AIM: 
+To write a python program for addition of two numbers and test the test cases using Pytest
+ 
+### Algorithm:
 ```
-File name: test_parameter.py
-import pytest
-@pytest.mark.parameterize(“input1, input2, output”,[(5,5,10),(3,5,12)])
-def test_add(input1, input2, output):
-assert input1 + input2 == output
-for execution : execute “pytest test_parameter.py”.
+Step 1: Write the python program for addition of two numbers.
+Step 2: Make sure that function name should be “def test_*():” and the line to be tested
+should have assert keyword at the beginning.
+Step 3: Write some test cases for to be tested and save it as “test_add.py”.
+Step 4: Open command prompt and change the directory to where pytest and program is
+saved and type “pytest test_add.py” and run it.
+Step 5: Stop the program.
 ```
 
+
+### Program:
+```
+def add(a,b):
+   return a+b
+def test_3_plus_5_equals_8():
+   assert add(3,5) == 8
+def test_2_plus_3_equals_5():
+   assert add(2,3) == 6 
+```
 ### Output:
-![image](https://github.com/user-attachments/assets/e3326fd4-e7fe-4e64-977d-7248146f2ff3)
+![image](https://github.com/user-attachments/assets/ebea3206-cdee-439d-a685-0365784964c4)
 
 
 
@@ -50,6 +35,5 @@ for execution : execute “pytest test_parameter.py”.
 
 
 ### Result:
-Thus, we have installed pytest, implemented and executed a parameterized addition
-program and the output is verified successfully. 
-
+Thus, the python program for addition is tested using pytest and executed and output is
+verified successfully. 
