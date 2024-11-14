@@ -1,33 +1,138 @@
-# Ex.No: 12 Pytest Python program for Addition
- 
-### DATE:22-10-2024                                                                         
-### REGISTER NUMBER :212222040020
+# Ex.No: 2   Matrix Multiplication 
+
+### DATE:   20-08-2024                                                                          
+### REGISTER NUMBER : 212222040020
+
 ### AIM: 
-To write a python program for addition of two numbers and test the test cases using Pytest
+Write a python program for matrix multiplication and inspect for failures.
  
 ### Algorithm:
-```
-Step 1: Write the python program for addition of two numbers.
-Step 2: Make sure that function name should be “def test_*():” and the line to be tested
-should have assert keyword at the beginning.
-Step 3: Write some test cases for to be tested and save it as “test_add.py”.
-Step 4: Open command prompt and change the directory to where pytest and program is
-saved and type “pytest test_add.py” and run it.
-Step 5: Stop the program.
-```
 
-
+Algorithm:
+1. Start the program.
+2. Create empty list formatrix1, matrix2 and result.
+3. Get the rows and columns count from the user.
+4. Get the values of two matrix.
+5. Perform matrix multiplication and store the answer in result.
+6. Stop the program.
 ### Program:
+
 ```
-def add(a,b):
-   return a+b
-def test_3_plus_5_equals_8():
-   assert add(3,5) == 8
-def test_2_plus_3_equals_5():
-   assert add(2,3) == 6 
+r1, c1 = input("Enter row and column count in matrix 1: ").split() 
+r2, c2 = input("Enter row and column count in matrix 2: ").split() 
+
+matrix1 = [] 
+matrix2 = [] 
+result = []
+
+# Check if input values are numeric
+if r1.isnumeric() and c1.isnumeric() and r2.isnumeric() and c2.isnumeric(): 
+    r1 = int(r1) 
+    r2 = int(r2) 
+    c1 = int(c1) 
+    c2 = int(c2)
+
+    # Check if matrix multiplication is possible
+    if c1 != r2: 
+        print("Matrix multiplication not possible") 
+    elif max(r1, c1, r2, c2) > 20 or min(r1, c1, r2, c2) == 0: 
+        print("Matrix multiplication not possible") 
+    else: 
+        # Input matrix 1
+        
+        print("Enter matrix 1:")
+        for i in range(r1): 
+            a = [] 
+            for j in range(c1): 
+                a.append(int(input(f"Element [{i+1}][{j+1}] for matrix 1: "))) 
+            matrix1.append(a) 
+        
+        # Input matrix 2
+        print("Enter matrix 2:")
+        for i in range(r2): 
+            a = [] 
+            for j in range(c2): 
+                a.append(int(input(f"Element [{i+1}][{j+1}] for matrix 2: "))) 
+            matrix2.append(a) 
+        
+        # Matrix multiplication logic
+        for i in range(r1): 
+            inter = [] 
+            for j in range(c2): 
+                sum = 0 
+                for k in range(c1):  # Should be c1 because it matches r2
+                    sum += matrix1[i][k] * matrix2[k][j] 
+                inter.append(sum) 
+            result.append(inter) 
+        
+        # Output the result
+        print("Resultant matrix after multiplication:")
+        for i in range(r1): 
+            for j in range(c2): 
+                print(result[i][j], end=" ") 
+            print() 
+
+else: 
+    print("Enter valid numeric values for matrix dimensions.")
+
+
 ```
+
+
+
+
+
+
+
+
+
+
+
 ### Output:
-![image](https://github.com/user-attachments/assets/ebea3206-cdee-439d-a685-0365784964c4)
+
+```
+Enter the size of a: 2 3
+Enter the size of b: 2 3
+Matrix multiplication is not possible.
+Reason to fail: to do multiplication of matrices the number of columns in matrix ―a[] should be
+equal to the number of rows in matrix in b[] 
+
+
+Enter the size of a: p q
+Enter the size of b: q s
+Matrix multiplication is not possible.
+Reason to fail: to do multiplication of matrices the number of columns in matrix ―a[]
+should be equal to number of rows in matrix ―bl, and rows & columns should be integer
+values. 
+
+
+
+Enter the size of a: 1.5 2
+Enter the size of b: 2 3
+Matrix multiplication is not possible.
+Reason to fail: to do multiplication of matrices the number of columns in matrix ―al should be
+equal to number of rows in matrix ―bl, and rows & columns should be integer values. 
+
+
+Enter the size of a: 350
+480 Enter the size of b:
+480 620
+Matrix multiplication is not possible.
+Reason to fail: size of buffer will be not be sufficient to handle this multiplication. 
+
+
+
+Enter the size of a: -
+1 -2 Enter the size of
+b: -2 3
+Matrix multiplication is not possible.
+Reason to fail: to do multiplication of matrices the number of columns in matrix ―al should
+be equal to number of rows in matrix ―bl, and rows & columns should be positive integer values. 
+
+
+
+
+```
 
 
 
@@ -35,5 +140,4 @@ def test_2_plus_3_equals_5():
 
 
 ### Result:
-Thus, the python program for addition is tested using pytest and executed and output is
-verified successfully. 
+Thus, the python program for matrix multiplication is implemented and the causes for its failure is introspected successfully.
