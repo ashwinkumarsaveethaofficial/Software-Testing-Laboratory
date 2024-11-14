@@ -1,54 +1,55 @@
-# Ex.No: 3 To check the number is prime or not and inspect for failures.
- 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No: 11  Pytest Installation 
+
+### DATE: 22-10-2024                                                                         
+### REGISTER NUMBER : 212222040020
+
 ### AIM: 
-Write a python program to check the number is prime or not and inspect for failures.
+To install Pytest and to write test cases for a program and to test using Pytest.
+
+#### Pytest:
+It is a testing framework that allows users to write test codes using python programming
+language. It helps you to write simple and scalable test case for databases, API’s or UI. Pytest
+is mainly used for writing tests from simple unit tests to complex functional tests. 
  
-### Algorithm:
-1. Start the program.
-2. Get the number to be checked from the user.
-3. If the number is less than or equal to 1, return "Not Prime".
-4. If the number is 2, return "Prime".
-5. Start the iteration from 3, For each iteration:
-6. If the number is divisible by the current iteration value, return "Not Prime".
-7. If the number is not divisible by any value from 2 to the square root, return "Prime".
-8. Stop the program.
+### Procedure:
+#### Installation on Windows:
+1) Navigate to folder where the python is installed.
+2) Open scripts folder and copy the address location.
+3) Open command prompt and execute “cd copied_address_Location”.
+4) Execute “pip install pytest”.
+#### Creating File:
+1) The file to be tested should have name as test_*.py or *_test.py
+2) File should be located in the same folder where pytest module is installed
+#### Creating a sample program:
+1) Function to be tested should has name def test_*();
+2) Inside the function the line to be tested should has assert keyword at the beginning.
 
-### Program:
+#### Terminologies in Pytest:
+     F – Failed
+     . – Passed S
+       – Skipped X
+       – xpassed x
+       – xfailed
+#### Eg:
+#### Parameterized Addition Program:
 ```
-num = input("Enter a number: ")
-flag = 0
-
-if num.isnumeric():
-    z = int(num)
-    if z < 1:
-        print("Enter a Positive Number")
-    else:
-        if z == 2:
-            flag = 1
-        elif z > 2:
-            for i in range(2, int(z ** 0.5) + 1):  # Check up to the square root of z
-                if z % i == 0:
-                    flag = 0
-                    break
-            else:
-                flag = 1
-        
-        if flag == 1:
-            print("Prime Number")
-        else:
-            print("Not a Prime Number")
-else:
-    print("Enter a Positive Number")
+File name: test_parameter.py
+import pytest
+@pytest.mark.parameterize(“input1, input2, output”,[(5,5,10),(3,5,12)])
+def test_add(input1, input2, output):
+assert input1 + input2 == output
+for execution : execute “pytest test_parameter.py”.
 ```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/e3326fd4-e7fe-4e64-977d-7248146f2ff3)
 
 
-![Screenshot (84)](https://github.com/user-attachments/assets/cd1ca00d-4c70-4ca1-80a9-387dea750025)
+
 
 
 
 ### Result:
-Thus, the python program to check the number is prime or not is implemented and the output is verified successfully.
+Thus, we have installed pytest, implemented and executed a parameterized addition
+program and the output is verified successfully. 
+
