@@ -1,39 +1,61 @@
-# Ex.No: 12 Pytest Python program for Addition
+# Ex.No: 3 To check the number is prime or not and inspect for failures.
  
-### DATE:22-10-2024                                                                         
-### REGISTER NUMBER :212222040128 
+### DATE: 27/08/2024                                                                           
+### REGISTER NUMBER : 212222040020
 ### AIM: 
-To write a python program for addition of two numbers and test the test cases using Pytest
+Write a python program to check the number is prime or not and inspect for failures.
  
 ### Algorithm:
-```
-Step 1: Write the python program for addition of two numbers.
-Step 2: Make sure that function name should be “def test_*():” and the line to be tested
-should have assert keyword at the beginning.
-Step 3: Write some test cases for to be tested and save it as “test_add.py”.
-Step 4: Open command prompt and change the directory to where pytest and program is
-saved and type “pytest test_add.py” and run it.
-Step 5: Stop the program.
-```
-
+1. Start the program.
+2. Get the number to be checked from the user.
+3. If the number is less than or equal to 1, return "Not Prime".
+4. If the number is 2, return "Prime".
+5. Start the iteration from 3, For each iteration:
+6. If the number is divisible by the current iteration value, return "Not Prime".
+7. If the number is not divisible by any value from 2 to the square root, return "Prime".
+8. Stop the program.
 
 ### Program:
+
 ```
-def add(a,b):
-   return a+b
-def test_3_plus_5_equals_8():
-   assert add(3,5) == 8
-def test_2_plus_3_equals_5():
-   assert add(2,3) == 6 
+num = input()
+flag = 0
+
+if num.isnumeric():
+    z = int(num)
+    if z == 2:
+        flag = 1
+    if z > 2:
+        for i in range(2, z // 2):
+            if z % i == 0:
+                flag = 0
+                break
+        else:
+            flag = 1
+    if flag == 1:
+        print("Prime Number")
+    else:
+        print("Not a Prime Number")
+else:
+    print("Enter a Positive Number")
+
 ```
+
+
+
+
+
+
+
+
+
+
+
 ### Output:
-![image](https://github.com/user-attachments/assets/ebea3206-cdee-439d-a685-0365784964c4)
 
-
-
+![image](https://github.com/user-attachments/assets/f5e7ad6c-e30c-4e2f-87c1-591277f46ec1)
 
 
 
 ### Result:
-Thus, the python program for addition is tested using pytest and executed and output is
-verified successfully. 
+Thus, the python program to check the number is prime or not is implemented and the output is verified successfully.
