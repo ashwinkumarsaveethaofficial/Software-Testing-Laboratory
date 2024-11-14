@@ -1,10 +1,11 @@
-Ex.No: 9 Test cases for Banking Application
-DATE: 08/10/2024
-REGISTER NUMBER :212222040020
-AIM:
-For Banking Applicationsystem study its system specifications and generate test cases.
+# Ex.No: 9  Test cases for Banking Application
 
-The characteristics of a Banking application are as follows:
+### DATE: 08/10/2024                                                                           
+### REGISTER NUMBER :212222040020
+### AIM: 
+For Banking Applicationsystem study its system specifications and generate test cases.
+### The characteristics of a Banking application are as follows: 
+```
 □ Multi-tier functionality to support thousands of concurrent user sessions 
 □ Large scale Integration, typically a banking application integrates with 
 numerous other applications such as Bill Pay utility and Trading accounts 
@@ -41,7 +42,11 @@ involving multiple software testing techniques to ensure:
  
 Typical stages involved in testing Banking Applications are shown in below workflow 
 which we will be discussing individually. 
-Requirement Gathering:
+```
+
+
+### Requirement Gathering: 
+```
 Requirement gathering phase involves documentation of requirements either as Functional 
 Specifications or Use Cases. Requirements are gathered as per customer needs and documented 
 by Banking Experts or Business Analyst. To write requirements on more than one subject 
@@ -49,27 +54,51 @@ expert are involved as banking itself has multiple sub domains and one full fled
 application will be the integration of all. For Example: A banking application may have 
 separate modules for Transfers, Credit Cards, Reports, Loan Accounts, Bill Payments, Trading 
 Etc. 
-Requirement Review:
+```
+
+
+### Requirement Review: 
+```
 The deliverable of Requirement Gathering is reviewed by all the stakeholders such as QA 
 Engineers, Development leads and Peer Business Analysts. They cross check that neither 
 existing business workflows nor new workflows are violated.
-Business Scenario Preparations:
+```
+
+
+
+### Business Scenario Preparations: 
+```
 In this stage QA Engineers derive Business Scenarios from the requirement documents 
 (Functions Specs or Use Cases); Business Scenarios are derived in such a way that all 
 Business Requirements are covered. Business Scenarios are high level scenarios without any 
 detailed steps, further these Business Scenarios are reviewed by Business Analyst to ensure 
 all of Business Requirements are met and its easier for BAs to review high level scenarios 
 than reviewing low level detailed Test Cases.
-Test Case Preparation:
+```
+
+
+
+
+### Test Case Preparation: 
+```
 In this stage Test Cases are derived from Business Scenarios, one Business Scenario leads to 
 several positive test cases and negative test cases. Generally tools used during this stage are 
 Microsoft Excel, Test Director or Quality Center. 
-Test Case Review:
+```
+
+### Test Case Review: 
+```
 Reviews by peer QA Engineers 
-Test Case Execution:
+```
+
+### Test Case Execution: 
+```
 Test Case Execution could be either manual or automatic involving tools like QC, QTP or 
 any other. 
-Database Testing:
+```
+
+### Database Testing: 
+```
 Banking Application involves complex transaction which are performed both at UI level and 
 Database level, Therefore Database testing is as important as functional testing. Database in 
 itself is an entirely separate layer hence it is carried out by database specialists and it uses 
@@ -81,7 +110,10 @@ Rules Testing
 Testing Stored Procedures and Functions 
 Testing Triggers 
 Data Integrity 
-Security Testing:
+```
+
+### Security Testing: 
+ ```
 Security Testing is usually the last stage in the testing cycle as completing functional and non 
 functional are entry criteria to commence Security testing. Security testing is one of the major 
 stages in the entire Application testing cycle as this stage ensures that application complies 
@@ -113,15 +145,28 @@ RUP widely involves IBM Rational tools.
 In this article we discussed how complex a Banking application could be and what are the 
 typical phases involved in testing the application. Apart from that we also discussed current 
 trends followed by IT industries including software development methodologies and tools. 
-Test cases for opening bank account:
-Input parameters checking:
+```
+
+
+### Test cases for opening bank account:
+## Input parameters checking: 
+```
 - Name -Date of Birth - Photo -Address Proof -Identity proof -Introducers (if applicable) - PAN card -Initial deposit -Whether checkbook / ATM card / Online banking facilities are needed or not -Customer signature 
-Type of account:
+```
+
+### Type of account: 
+```
 - Savings account -Salary account -Joint account - Current account - Secondary account -RD account -Account for a company
-Test cases:
+```
+
+### Test cases: 
+```
 -Checking mandatory input parameters -Checking optional input parameters -Check whether able to create account entity. -Check whether you are able to deposit an amount in the newly created account (and thus updating 
 the balance) -Check whether you are able to withdraw an amount in the newly created account (after 
 deposit) (and thus updating the balance) -Check whether company name and its pan number and other details are provided in case ofsalary 
 account -Check whether primary account number is provided in case of secondary account -Check whether company details are provided in cases of company's current account -Check whether proofs for joint account is provided in case of joint account -Check whether you are able deposit an account in the name of either of the person in a joint
-Result:
-Thus, the Test cases for Banking Application is implemented and output is verified successfully.
+```
+
+
+### Result:
+Thus, the Test cases for Banking Application is implemented and output is verified successfully. 
